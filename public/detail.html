@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Détail d’un décès</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Recherche de décès en France</h1>
+  </header>
+
+  <main>
+    <a href="/" class="btn-back">← Retour à la recherche</a>
+
+    <!-- Carte "avis de décès" en haut -->
+    <section class="deceased-header">
+      <div class="deceased-intro">Avis de décès de</div>
+      <h2 id="deceased-name" class="deceased-name">
+        <!-- Nom complet rempli par JS -->
+      </h2>
+      <div id="deceased-dates" class="deceased-dates">
+        <!-- "Né le ... - Décédé le ... (X ans)" rempli par JS -->
+      </div>
+    </section>
+
+    <!-- Détails sous forme de tableau -->
+    <section id="detail-container" class="detail-card">
+      <!-- Contenu rempli par detail.js -->
+    </section>
+
+    <div id="detail-message" class="alert" style="display:none;"></div>
+  </main>
+
+  <footer>
+    <p>Données fournies par <a href="https://deces.matchid.io" target="_blank" rel="noopener noreferrer">matchID</a> (INSEE).</p>
+  </footer>
+
+  <script src="js/detail.js"></script>
+</body>
+</html>

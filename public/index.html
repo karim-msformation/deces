@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recherche de décès en France</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Recherche de décès en France</h1>
+    <p>Interface basée sur l’API publique matchID (données INSEE).</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <form id="search-form" class="search-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Dupont">
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Jean">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="datenaissance">Date de naissance</label>
+            <input type="date" id="datenaissance" name="datenaissance">
+          </div>
+          <div class="form-group">
+            <label for="lieunaissance">Lieu de naissance (ville)</label>
+            <input type="text" id="lieunaissance" name="lieunaissance" placeholder="Paris">
+          </div>
+        </div>
+
+        <button type="submit" class="btn-search">Rechercher</button>
+      </form>
+
+      <div id="message" class="alert" style="display:none;"></div>
+    </section>
+
+    <section class="results-section">
+      <h2>Résultats</h2>
+      <div id="results-container" class="results-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Données fournies par <a href="https://deces.matchid.io" target="_blank" rel="noopener noreferrer">matchID</a> (INSEE).</p>
+  </footer>
+
+  <script src="js/search.js"></script>
+</body>
+</html>
