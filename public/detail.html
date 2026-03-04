@@ -9,32 +9,53 @@
 <body>
   <header>
     <h1>Recherche de décès en France</h1>
+    <p class="subtitle">
+      Données issues des fichiers de décès INSEE, via le service public matchID.
+    </p>
   </header>
 
-  <main>
+  <main class="detail-page">
     <a href="/" class="btn-back">← Retour à la recherche</a>
 
-    <!-- Carte "avis de décès" en haut -->
+    <!-- En-tête de la fiche -->
     <section class="deceased-header">
       <div class="deceased-intro">Avis de décès de</div>
       <h2 id="deceased-name" class="deceased-name">
         <!-- Nom complet rempli par JS -->
       </h2>
       <div id="deceased-dates" class="deceased-dates">
-        <!-- "Né le ... - Décédé le ... (X ans)" rempli par JS -->
+        <!-- "Né(e) le ... – Décédé(e) le ... (X ans)" rempli par JS -->
       </div>
     </section>
 
-    <!-- Détails sous forme de tableau -->
+    <!-- Détails structurés -->
     <section id="detail-container" class="detail-card">
-      <!-- Contenu rempli par detail.js -->
+      <!-- Contenu rempli par detail.js (table) -->
     </section>
 
     <div id="detail-message" class="alert" style="display:none;"></div>
+
+    <!-- Bloc d’information contextuelle -->
+    <section class="info-box">
+      <h3>À propos de ces informations</h3>
+      <p>
+        Les données affichées proviennent des fichiers de décès publiés par
+        l’Institut national de la statistique et des études économiques (INSEE),
+        accessibles via le moteur de recherche public
+        <a href="https://deces.matchid.io" target="_blank" rel="noopener noreferrer">matchID</a>.
+      </p>
+      <p>
+        Elles couvrent les décès déclarés en France depuis 1970. Les mises à jour
+        sont réalisées régulièrement, au rythme de la publication de l’INSEE.
+      </p>
+    </section>
   </main>
 
   <footer>
-    <p>Données fournies par <a href="https://deces.matchid.io" target="_blank" rel="noopener noreferrer">matchID</a> (INSEE).</p>
+    <p>
+      Interface indépendante utilisant l’API publique
+      <a href="https://deces.matchid.io" target="_blank" rel="noopener noreferrer">matchID</a>.
+    </p>
   </footer>
 
   <script src="js/detail.js"></script>
